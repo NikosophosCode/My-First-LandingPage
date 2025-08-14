@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="es" class="h-full">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog Mario Bros | Mundo 1-1</title>
+  <meta name="description" content="Blog de noticias, curiosidades y guías sobre los videojuegos de Mario Bros." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            pixel: ['"Press Start 2P"', 'cursive'],
+            sans: ['Poppins', 'ui-sans-serif', 'system-ui']
+          },
+          colors: {
+            marioRed: '#E52521',
+            marioBlue: '#1D5DB4',
+            marioYellow: '#FBD000',
+            marioGreen: '#3CB043',
+            brick: '#B35427'
+          },
+          backgroundImage: {
+            'clouds': "url('https://raw.githubusercontent.com/itscodenation/mario-run/master/images/clouds.png')",
+            'hill': "url('https://raw.githubusercontent.com/itscodenation/mario-run/master/images/hill.png')",
+            'question': "url('https://raw.githubusercontent.com/itscodenation/mario-run/master/images/question.gif')"
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .pixel-shadow { text-shadow: 2px 2px 0 #000; }
+    .brick-pattern { background: repeating-linear-gradient(0deg,#b35427 0 18px,#b35427 18px 19px), repeating-linear-gradient(90deg,#b35427 0 38px,#8a3c17 38px 40px); background-size:40px 40px; }
+    .coin-spin { animation:     spin 1.2s linear infinite; }
+    @keyframes spin { 0% { transform: rotateY(0deg);} 50% { transform: rotateY(180deg);} 100% { transform: rotateY(360deg);} }
+  </style>
+</head>
+<body class="font-sans bg-gradient-to-b from-sky-200 to-sky-400 min-h-full relative overflow-x-hidden">
+  <!-- Header / Navbar -->
+  <header class="relative z-20">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between py-6">
+        <a href="#" class="flex items-center gap-3">
+          <img src="./assets/img/logo-mario.png" alt="Mario" class="h-10 drop-shadow" />
+          <span class="font-pixel text-marioRed text-sm md:text-base pixel-shadow">Mario Blog</span>
+        </a>
+        <nav class="hidden md:flex gap-6 font-pixel text-[10px]">
+          <a href="#articulos" class="text-marioBlue hover:text-marioRed transition">Artículos</a>
+          <a href="#guias" class="text-marioBlue hover:text-marioRed transition">Guías</a>
+          <a href="#curiosidades" class="text-marioBlue hover:text-marioRed transition">Curiosidades</a>
+          <a href="#contacto" class="text-marioBlue hover:text-marioRed transition">Contacto</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative isolate overflow-hidden">
+    <div class="absolute inset-0 bg-clouds opacity-30 bg-repeat [background-size:600px]"></div>
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 lg:py-28">
+      <div class="grid lg:grid-cols-2 gap-10 items-center">
+        <div class="space-y-6">
+          <h1 class="font-pixel text-2xl sm:text-3xl md:text-4xl text-white pixel-shadow leading-relaxed">
+            ¡Bienvenido al Mundo 1-1 del Universo Mario!
+          </h1>
+          <p class="text-sky-950/90 text-lg md:text-xl font-semibold">
+            Noticias, historia, secretos, análisis y nostalgia de todos los juegos de Mario Bros: desde 8 bits hasta mundos 3D.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="#articulos" class="relative inline-flex items-center gap-2 bg-marioRed text-white font-pixel text-[11px] px-4 py-3 rounded shadow-md shadow-red-700/40 hover:scale-105 transition">
+              <span>Leer Artículos</span>
+              <span class="coin-spin inline-block">🪙</span>
+            </a>
+            <a href="#suscripcion" class="relative inline-flex items-center gap-2 bg-marioYellow text-black font-pixel text-[11px] px-4 py-3 rounded shadow-md shadow-yellow-600/40 hover:scale-105 transition">
+              <span>Suscríbete</span>
+              <img src="https://raw.githubusercontent.com/itscodenation/mario-run/master/images/star.png" alt="Estrella" class="h-5" />
+            </a>
+          </div>
+        </div>
+        <div class="relative">
+          <div class="relative mx-auto max-w-sm">
+            <img src="https://raw.githubusercontent.com/itscodenation/mario-run/master/images/mario-running.gif" alt="Mario corriendo" class="w-full drop-shadow-lg rounded-lg border-4 border-white" />
+            <div class="absolute -bottom-6 -left-6 w-24 h-24 bg-marioYellow rounded-full flex items-center justify-center shadow-lg rotate-6">
+              <img src="https://raw.githubusercontent.com/itscodenation/mario-run/master/images/coin.gif" alt="Moneda" class="w-14 h-14" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="h-6 w-full bg-gradient-to-b from-transparent to-sky-500"></div>
+    <div class="h-8 w-full brick-pattern border-t-4 border-b-4 border-brick"></div>
+    <div class="h-10 w-full bg-marioGreen"></div>
+  </section>
+
+  <!-- Artículos Recientes -->
+  <section id="articulos" class="relative py-16 bg-white/90 backdrop-blur-sm">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center gap-3 mb-10">
+        <img src="https://raw.githubusercontent.com/itscodenation/mario-run/master/images/mushroom.png" class="h-10" alt="Hongo" />
+        <h2 class="font-pixel text-xl text-marioRed pixel-shadow">Artículos Recientes</h2>
+      </div>
+      <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3" id="posts-grid">
+        <!-- Tarjetas generadas por JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Guías -->
+  <section id="guias" class="py-16 bg-gradient-to-b from-marioBlue to-sky-700 text-white">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center gap-3 mb-10">
+        <img src="https://raw.githubusercontent.com/itscodenation/mario-run/master/images/flower.png" class="h-10" alt="Flor de fuego" />
+        <h2 class="font-pixel text-xl pixel-shadow">Guías y Estrategias</h2>
+      </div>
+      <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3" id="guides-grid"></div>
+    </div>
+  </section>
+
+  <!-- Curiosidades -->
+  <section id="curiosidades" class="py-16 bg-marioYellow/90">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center gap-3 mb-10">
+        <img src="https://raw.githubusercontent.com/itscodenation/mario-run/master/images/star.png" class="h-10" alt="Estrella" />
+        <h2 class="font-pixel text-xl text-black pixel-shadow">Curiosidades</h2>
+      </div>
+      <ul class="space-y-4 font-semibold text-slate-800 text-sm md:text-base list-disc pl-6" id="facts-list"></ul>
+    </div>
+  </section>
+
+  <!-- Suscripción -->
+  <section id="suscripcion" class="py-16 bg-white">
+    <div class="mx-auto max-w-xl px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-pixel text-lg text-marioRed mb-6 pixel-shadow">Suscríbete para más secretos</h2>
+      <form class="space-y-4" id="subscribe-form">
+        <input required type="email" placeholder="Tu email" class="w-full px-4 py-3 rounded border-2 border-marioBlue focus:outline-none focus:ring-4 focus:ring-marioBlue/40" />
+        <button class="w-full bg-marioRed text-white font-pixel text-[11px] px-4 py-3 rounded shadow-md shadow-red-700/40 hover:scale-[1.03] transition">Quiero Power-Ups</button>
+        <p class="text-xs text-slate-500">Prometemos nada de spam, solo contenido estelar ⭐</p>
+      </form>
+      <p id="subscribe-msg" class="hidden mt-4 font-pixel text-[11px] text-marioGreen">¡Suscripción exitosa! Revisa tu correo ✉️</p>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <footer id="contacto" class="bg-slate-900 text-slate-200 py-14 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-[0.08] bg-[radial-gradient(circle_at_1px_1px,#fff_1px,transparent_0)] [background-size:32px_32px]"></div>
+    <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid gap-10 md:grid-cols-3">
+      <div>
+        <h3 class="font-pixel text-marioYellow text-sm mb-4">Mario Blog</h3>
+        <p class="text-sm leading-relaxed">Proyecto fan no oficial dedicado a celebrar el legado de Super Mario. Todas las marcas pertenecen a Nintendo.</p>
+      </div>
+      <div>
+        <h4 class="font-pixel text-marioYellow text-xs mb-4">ENLACES</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a class="hover:text-white" href="#articulos">Artículos</a></li>
+          <li><a class="hover:text-white" href="#guias">Guías</a></li>
+          <li><a class="hover:text-white" href="#curiosidades">Curiosidades</a></li>
+          <li><a class="hover:text-white" href="#suscripcion">Suscripción</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-pixel text-marioYellow text-xs mb-4">CONTACTO</h4>
+        <p class="text-sm">Escríbeme a: <a href="mailto:contacto@marioblog.dev" class="text-marioYellow underline">contacto@marioblog.dev</a></p>
+        <div class="flex gap-4 mt-4">
+          <a href="https://twitter.com" aria-label="Twitter" class="hover:scale-110 transition"><img src="https://raw.githubusercontent.com/itscodenation/mario-run/master/images/coin.gif" alt="Moneda" class="h-8" /></a>
+          <a href="https://youtube.com" aria-label="YouTube" class="hover:scale-110 transition"><img src="https://raw.githubusercontent.com/itscodenation/mario-run/master/images/mario.png" alt="Mario" class="h-8" /></a>
+          <a href="https://github.com" aria-label="GitHub" class="hover:scale-110 transition"><img src="https://raw.githubusercontent.com/itscodenation/mario-run/master/images/goomba.png" alt="Goomba" class="h-8" /></a>
+        </div>
+      </div>
+    </div>
+    <div class="mt-10 text-center text-xs text-slate-500">Hecho con ❤️ y nostalgia. No afiliado a Nintendo.</div>
+  </footer>
+
+  <script src="./src/JS/main.js"></script>
+</body>
+</html>

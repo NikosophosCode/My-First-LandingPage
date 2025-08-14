@@ -1,0 +1,21 @@
+{
+  "name": "my-first-landingpage",
+  "version": "1.0.0",
+  "description": "My first landing page, project/challenge of JavaScript Asyncronic Platzi course",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NikosophosCode/My-First-LandingPage.git"
+  },
+  "keywords": [],
+  "author": "Nicolás Acuña <niconiampira@hotmail.com>",
+  "license": "MIT",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/NikosophosCode/My-First-LandingPage/issues"
+  },
+  "homepage": "https://github.com/NikosophosCode/My-First-LandingPage#readme"
+}
