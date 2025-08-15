@@ -4,7 +4,7 @@
   "description": "My first landing page, project/challenge of JavaScript Asyncronic Platzi course",
   "main": "index.js",
   "scripts": {
-    "gh-pages": "gh-pages -d src"
+    "gh-pages": "gh-pages -d src/JS"
   },
   "repository": {
     "type": "git",
