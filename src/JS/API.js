@@ -1,4 +1,4 @@
-const url = 'https://youtube138.p.rapidapi.com/channel/videos/?id=UCF24DcbdgL2w6x2jXZxAFvA&filter=videos_latest&hl=es&gl=US';
+const url = 'https://youtube138.p.rapidapi.com/channel/videos/?id=UCF24DcbdgL2w6x2jXZxAFvA&filter=videos_latest&hl=en&gl=US';
 const options = {
 	method: 'GET',
 	headers: {
@@ -7,10 +7,13 @@ const options = {
 	}
 };
 
-try {
-	const response = await fetch(url, options);
-	const result = await response.text();
-	console.log(result);
-} catch (error) {
-	console.error(error);
+async function fetchData(url = url, options = options) {
+    try {
+        const response = await fetch(url, options);
+        const result = await response.text();
+        console.log(result);
+    } catch (error) {
+        console.error(error);
+    }
 }
+fetchData(url, options);

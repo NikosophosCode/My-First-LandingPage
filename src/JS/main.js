@@ -21,9 +21,9 @@ const posts = [
 ];
 
 const guides = [
-	{ title: 'Velocidad en Mario Kart 8 Deluxe', icon: 'https://raw.githubusercontent.com/itscodenation/mario-run/master/images/star.png', level: 'Intermedio' },
-	{ title: 'Rutas rápidas en Super Mario 64', icon: 'https://raw.githubusercontent.com/itscodenation/mario-run/master/images/mushroom.png', level: 'Avanzado' },
-	{ title: 'Cómo optimizar saltos en Odyssey', icon: 'https://raw.githubusercontent.com/itscodenation/mario-run/master/images/flower.png', level: 'Avanzado' }
+	{ title: 'Velocidad en Mario Kart 8 Deluxe', icon: './assets/img/estrella.webp', level: 'Intermedio' },
+	{ title: 'Rutas rápidas en Super Mario 64', icon: './assets/img/hongo.webp', level: 'Avanzado' },
+	{ title: 'Cómo optimizar saltos en Odyssey', icon: './assets/img/flor.png', level: 'Avanzado' }
 ];
 
 const facts = [
@@ -39,13 +39,13 @@ const facts = [
 // Para un proyecto real se debe usar un backend o variables de entorno con build.
 // Aquí se mantiene el ejemplo funcional didáctico.
 
-const YT_CHANNEL_ID = 'UCEK0oX3X2yK9y27khCsrNKg';
-const YT_ENDPOINT = `https://yt-api.p.rapidapi.com/channel/videos?id=${YT_CHANNEL_ID}`;
+const YT_CHANNEL_ID = 'UCF24DcbdgL2w6x2jXZxAFvA';
+const YT_ENDPOINT = `https://youtube138.p.rapidapi.com/channel/videos/?id=${YT_CHANNEL_ID}&filter=videos_latest&hl=en&gl=US`;
 const YT_OPTIONS = {
 	method: 'GET',
 	headers: {
 		'x-rapidapi-key': '36508f500amshf40c26e67e26d68p18770djsned61dd7ade51', // Demo ONLY
-		'x-rapidapi-host': 'yt-api.p.rapidapi.com'
+		'x-rapidapi-host': 'youtube138.p.rapidapi.com'
 	}
 };
 
