@@ -2,19 +2,19 @@
 const posts = [
 	{
 		title: 'Historia de Super Mario Bros (1985)',
-		cover: 'https://i.imgur.com/po0Rj1C.png',
+		cover: './assets/img/mario1985.jpg',
 		excerpt: 'Cómo el primer juego lateral de NES redefinió las plataformas y salvó la industria.',
 		tag: 'Historia'
 	},
 	{
 		title: 'Todos los Power-Ups de Mario explicados',
-		cover: 'https://i.imgur.com/1t7f6lX.png',
+		cover: './assets/img/powerUps.webp',
 		excerpt: 'Setas, flores, trajes y más: para qué sirve cada uno y su debut.',
 		tag: 'Guía'
 	},
 	{
 		title: 'Secretos del Mundo -1',
-		cover: 'https://i.imgur.com/YY0v0qP.png',
+		cover: './assets/img/secretLevel.webp',
 		excerpt: 'El nivel glitch más famoso: cómo acceder y qué significa técnicamente.',
 		tag: 'Secretos'
 	}
