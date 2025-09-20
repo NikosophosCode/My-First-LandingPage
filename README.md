@@ -9,7 +9,7 @@ Landing page temática inspirada en el universo de Super Mario que funciona como
 ## ✨ Características Principales
 
 - Hero retro con fuentes pixel y colores personalizados vía configuración de Tailwind (modo CDN).
-- Sección de Artículos generada dinámicamente desde un arreglo (fácil de reemplazar por un fetch futuro).
+- Sección de Artículos generada dinámicamente desde un arreglo.
 - Últimos Videos: consumo de endpoint (RapidAPI / youtube138) con esqueletons (skeleton loaders), manejo de errores y formateo de vistas.
 - Guías y Curiosidades renderizadas dinámicamente desde data local.
 - Formulario de suscripción con validación básica de email en cliente y mensaje de éxito amigable.
@@ -40,8 +40,6 @@ Landing page temática inspirada en el universo de Super Mario que funciona como
 ├─ package.json          # Dependencias (gh-pages) y metadatos
 └─ README.md             # Documentación
 ```
-
-📌 Nota: El script de deploy actual apunta a `src` pero el `index.html` está en la raíz. Ver apartado “Deploy” para ajustar.
 
 ## 🚀 Inicio Rápido (Local)
 
@@ -88,12 +86,6 @@ Pequeñas utilidades:
 
 - `sanitizeText` evita inyectar `<` o `>` en títulos de videos.
 
-## 🧪 Posibles Tests (No incluidos aún)
-
-Ideas de pruebas unitarias (si se integra Jest / Vitest):
-- Sanitización de texto.
-- Formateo de vistas (Intl.NumberFormat).
-- Manejo de error en `fetchLatestVideos` (mock de fetch que arroja error).
 
 ## 🌐 Deploy en GitHub Pages
 
